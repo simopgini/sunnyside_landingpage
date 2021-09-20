@@ -1,0 +1,16 @@
+{
+  "name": "landingpage2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "watch": "sass -w ./scss/style.scss ./dist/css/style.css",
+    "build": "sass ./scss/style.scss ./dist/css/style.css",
+    "server": "serve ./dist"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "sass": "^1.37.5",
+    "serve": "^12.0.1"
+  }
+}

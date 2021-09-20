@@ -1,0 +1,105 @@
+// nav bar including drop-down menu with buttons
+.nav {
+  width: 100%;
+  padding: 15px 20px;
+
+  @media (min-width: map-get($breakpoints, "md")) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .menu-button {
+      display: none;
+    }
+  }
+
+  .menu-button {
+    color: white;
+  }
+
+  .logo-and-menu-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: map-get($breakpoints, "md")) {
+      display: block;
+    }
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    &.visible {
+      display: flex;
+    }
+
+    @media (min-width: map-get($breakpoints, "md")) {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .link {
+      color: $primary-color;
+      text-decoration: none;
+      padding: 15px 0;
+      width: 100%;
+      border-bottom: $primary-color solid 1px;
+      font-weight: bold;
+      text-align: center;
+
+      @media (min-width: map-get($breakpoints, "md")) {
+        font-weight: normal;
+        border-bottom: 0;
+        transition: background-color 0.8s;
+        margin-left: 5px;
+        padding: 15px 20px;
+        border-radius: 40px;
+      }
+
+      &:hover {
+        @media (min-width: map-get($breakpoints, "md")) {
+          background-color: rgba(255, 255, 255, 0.7);
+          color: black;
+          opacity: 70%;
+        }
+      }
+    }
+
+    .button {
+      text-decoration: none;
+      color: $primary-color;
+      text-transform: lowercase;
+      font-weight: bold;
+      padding: 15px 20px;
+      width: 100%;
+      text-align: center;
+      border-bottom: $primary-color solid 1px;
+
+      &:first-letter {
+        text-transform: uppercase;
+      }
+
+      @media (min-width: map-get($breakpoints, "md")) {
+        border-bottom: 0;
+        border-radius: 40px;
+        background-color: $primary-color;
+        color: $text-color2;
+        font-family: $font-2;
+        margin-left: 10px;
+        border-width: 2px;
+        border-radius: 40px;
+        text-transform: uppercase;
+        transition: background-color 0.5s;
+      }
+
+      &:hover {
+        @media (min-width: map-get($breakpoints, "md")) {
+          background-color: rgba(255, 255, 255, 0.7);
+        }
+      }
+    }
+  }
+}
